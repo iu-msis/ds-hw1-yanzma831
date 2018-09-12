@@ -46,11 +46,11 @@
   <h3>Basic Info</h3>
   <ul v-for="task in tasks" id="fontsize">
     <li>First: {{task.first}}</li>
-    <li>Last:{{task.last}}</li>
+    <li>Last:{{task.name.last}}</li>
     <li>Gender:{{task.gender}}</li>
-    <li>Birthdate:{{task.dob}}</li>
-    <li>Age:{{task.age}}</li>
-    <li>Address:{{task.address}}</li>
+    <li>Birthdate:{{task.dob.date}}</li>
+    <li>Age:{{task.dob.age}}</li>
+    <li>Address:{{task.location.street}}</li>
     <li>Phone:{{task.phone}}</li>
     <li>Email Address:<a href="https://www.google.com/"> {{task.email}}</a></li>
   </ul>
