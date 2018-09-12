@@ -37,33 +37,26 @@
 
 </nav>
   <center>
-
   <main id="profile">
+
   <h1>About Me </h1>
-<a href="https://giphy.com/gifs/minions-m6OomwWCojfS8/fullscreen"> <img class="img-circle center-block" src="img/profilepic.gif" alt="my profile picture" width="450" height="450"></a>
+  <a href="https://giphy.com/gifs/minions-m6OomwWCojfS8/fullscreen"> <img class="img-circle center-block" src="img/profilepic.gif" alt="my profile picture" width="450" height="450"></a>
 
   <div class= "fontcolor">
   <h3>Basic Info</h3>
-  <ul id="fontsize">
-    <li>
-      Name: Debra Howell
-    </li>
-    <li>
-      Country:United States
-    </li>
-    <li>
-      Birthdate:9/7/1975
-    </li>
-    <li>
-      Age:43
-    </li>
-    <li>
-      Email Address:<a href="https://www.google.com/"> debra.howell88@outlook.com</a>
-    </li>
+  <ul v-for="task in tasks" id="fontsize">
+    <li>First: {{task.first}}</li>
+    <li>Last:{{task.last}}</li>
+    <li>Gender:{{task.gender}}</li>
+    <li>Birthdate:{{task.dob}}</li>
+    <li>Age:{{task.age}}</li>
+    <li>Address:{{task.address}}</li>
+    <li>Phone:{{task.phone}}</li>
+    <li>Email Address:<a href="https://www.google.com/"> {{task.email}}</a></li>
   </ul>
-</div>
-
-</main>
+  </div>
+  <button>refresh</button>
+  </main>
   </center>
   <!-- development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
