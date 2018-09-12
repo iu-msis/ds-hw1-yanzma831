@@ -5,6 +5,11 @@ var profilePage = new Vue({
 
 
 },
+computed:{
+ age:function(){
+return moment(this.dob.date).diff(moment(),'years')
+}
+},
 methods: {
   fetchTasks (){
   fetch('https://randomuser.me/api')
