@@ -48,8 +48,8 @@
     <li>First: {{task.name.first}}</li>
     <li>Last:{{task.name.last}}</li>
     <li>Gender:{{task.gender}}</li>
-    <li>Birthdate:{{pretty_date(task.dob.age)}}</li>
-    <li>Age:{{years_left}}</li>
+    <li>Birthdate:{{pretty_date(task.dob.date)}}</li>
+    <li>Age:{{age(task.dob.date)}}</li>
     <li>Address:{{task.location.street}}</li>
     <li>Phone:{{task.phone}}</li>
     <li>Email Address:<a href="https://www.google.com/"> {{task.email}}</a></li>

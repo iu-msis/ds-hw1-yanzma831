@@ -6,14 +6,14 @@ var profilePage = new Vue({
 tasks:[{
 
 }
-]
+],
 
 },
-
 methods:{
   pretty_date: function(d){
     return moment(d).format('l')
 },
+
 
   fetchTasks (){
   fetch('https://randomuser.me/api')
@@ -26,6 +26,9 @@ methods:{
   console.log('Task Fetch Error:');
   console.log(err);
   });
+  },
+  age: function(d){
+    return moment().diff(moment(d),'years')
   }
 },
 
@@ -33,12 +36,9 @@ created(){
 this.fetchTasks();
 },
 
-computed:{
-years_left:function(){
-return moment(this.dob.age).diff(moment(),'years')
-}
 
-},
+
+
 
 
 })
