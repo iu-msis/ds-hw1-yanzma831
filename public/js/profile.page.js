@@ -1,16 +1,20 @@
 var profilePage = new Vue({
   el: '#profile',
   data: {
-    tasks:{}
 
 
-},
-computed:{
- age:function(){
-return moment(this.dob.date).diff(moment(),'years')
+tasks:[{
+
 }
+]
+
 },
-methods: {
+
+methods:{
+  pretty_date: function(d){
+    return moment(d).format('l')
+},
+
   fetchTasks (){
   fetch('https://randomuser.me/api')
   .then( response => response.json())
@@ -27,12 +31,14 @@ methods: {
 
 created(){
 this.fetchTasks();
+},
+
+computed:{
+years_left:function(){
+return moment(this.dob.age).diff(moment(),'years')
 }
 
-
-
-
-
+},
 
 
 })
