@@ -1,9 +1,9 @@
 var profilePage = new Vue({
   el: '#profile',
   data: {
-  tasks:[{
+  tasks:[
 
-  }
+
   ],
 
   },
