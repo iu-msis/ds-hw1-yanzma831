@@ -6,7 +6,7 @@ class Comment
 
   public function __construct($data){
     $this->id=intval($data['id']);
-    $this->comment=$comment['comment'];
+    $this->comment=$data['comment'];
 
 }
 
