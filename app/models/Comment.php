@@ -3,7 +3,6 @@ class Comment
 {
   public $id;
   public $comment;
-  }
   public static function getCommentByCommentId(int $commentId) {
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
