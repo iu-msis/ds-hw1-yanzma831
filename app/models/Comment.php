@@ -20,6 +20,8 @@ public function create(){
     $this->id,
     $this->comment
 ]);
+
+    $this->id = $db->lastInsertId();
 }
 
 public static function fetchAll() {
