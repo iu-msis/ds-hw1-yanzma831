@@ -38,19 +38,11 @@
     <th scope="col">Comment</th>
   </tr>
 </thead>
-<tbody id="commentTableBody">
-  <tr>
-    <th scope="row">1</th>
-    <td>Mark</td>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td>Jacob</td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td>Larry</td>
-  </tr>
+<tbody id="commentTableBody" v-for = "c in comment" >
+
+  <td>{{c.id}}</td>
+    <td>{{c.comment}}</td>
+
 </tbody>
 </table>
 
