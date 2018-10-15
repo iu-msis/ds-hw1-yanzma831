@@ -38,10 +38,9 @@
     <th scope="col">Comment</th>
   </tr>
 </thead>
-<tbody id="commentTableBody" v-for = "c in comment" >
-
+<tbody id="commentTableBody" v-for = "c in comment" :key = "c.id" :value = "c.id">
   <td>{{c.id}}</td>
-    <td>{{c.comment}}</td>
+  <td>{{c.comment}}</td>
 
 </tbody>
 </table>

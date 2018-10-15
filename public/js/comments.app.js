@@ -1,17 +1,28 @@
 var commentsApp = new Vue({
-  el: '#comments',
+  el: '#comment',
   data: {
-    comment: [ ],
+  comment:[],
+  },
+
+  methods:{
+
+  fetchComments (){
+  fetch('api/comment.php')
+  .then( response => response.json())
+  .then(json =>{
+  commentsApp.comment=json.results;
+  })
+
+  .catch(err => {
+  console.log('Comment Fetch Error:');
+  console.log(err);
+  });
+  },
 
   },
 
-    fetchComments(){// Fetch all teams, for the form
-    fetch('api/comment.php')
-    .then( response => response.json() )
-    .then( json => {commentsApp.comment = json})
-    .catch( err => {
-      console.log('TEAM LIST ERROR:');
-      console.log(err);
-    })
-  }
-})
+  created(){
+  this.fetchComments();
+  },
+
+  })
