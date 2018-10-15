@@ -27,7 +27,7 @@ var commentsApp = new Vue({
 
   created(){
   this.fetchComments();
-console.log('hello.');
-  },
+
+},
 
   })
