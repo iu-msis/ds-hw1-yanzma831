@@ -11,7 +11,7 @@ var commentsApp = new Vue({
   .then( response => response.json())
   .then(json =>{commentsApp.comment=json;})
 
-  .catch(err => {
+  .catch(err =>{
   console.log('Comment Fetch Error:');
   console.log(err);
   });
