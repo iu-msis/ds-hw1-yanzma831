@@ -1,5 +1,5 @@
 var commentsApp = new Vue({
-  el: '#comment',
+  el: '#commentMain',
   data: {
   comment:[{
   id : 0,
