@@ -47,7 +47,7 @@
 </tbody>
 </table>
 
-<form id="newCommentForm">
+<form @submit.prevent="handleCommentPost" id="newCommentForm">
   <div class="form-group">
     <label>Comment</label>
     <input class="form-control" id="comment" v-model="commentForm.comment" placeholder="Enter your comment">
