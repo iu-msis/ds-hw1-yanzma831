@@ -40,11 +40,9 @@
   </tr>
 </thead>
 <tbody id="commentTableBody">
-<tr v-for = "c in comment" :key = "c.id" :value = "c.id">
-
+<tr v-for = "c in comment">
   <td>{{c.id}}</td>
   <td>{{c.comment}}</td>
-
 </tr>
 </tbody>
 </table>
